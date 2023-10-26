@@ -1,0 +1,13 @@
+.button {
+  @apply px-5 py-2    mt-10  outline-none  ring-secondary    inline-flex tracking-widest font-sans
+  text-secondary  bg-primary transition duration-300 hover:scale-110 hover:bg-secondary hover:text-primary hover:ring-primary;
+}
+
+.intro-content {
+  @apply bg-white text-secondary h-full    text-justify text-xl flex flex-col  items-center w-full p-10 drop-shadow-xl;
+}
+
+.intro {
+  @apply mt-32 bg-dullwhite p-4 w-full  grid sm:grid-cols-1 md:grid-cols-2;
+}
+
