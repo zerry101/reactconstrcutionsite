@@ -1,7 +1,26 @@
-// import input from "@mui/material/input";
-// import Button from "@mui/material/Button";
+import { useFormik } from "formik";
+import { contactFormSchema } from "../Schemas";
+
+const initialValues = {
+  FIRSTNAME: "",
+  LASTNAME: "",
+  EMAIL: "",
+  PHONENUMBER: "",
+  text_message: "",
+};
 
 const Contact = () => {
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: contactFormSchema,
+      onSubmit: (values) => {
+        console.log(values);
+      },
+    });
+
+  console.log(errors);
+
   return (
     <section>
       {" "}
@@ -31,7 +50,10 @@ const Contact = () => {
               ></img>
             </div>
             <div className="px-9      w-full ">
-              <form className=" w-full h-full flex flex-col items-start     justify-center   ">
+              <form
+                onSubmit={handleSubmit}
+                className=" w-full h-full flex flex-col items-start     justify-center   "
+              >
                 {/* Firstname Lastname row */}
                 <div className="flex   max-sm:flex-col md:flex-row  justify-between  w-full ">
                   <div className="w-full m-3  ">
@@ -42,7 +64,14 @@ const Contact = () => {
                       className=" bg-gray-200  py-3 px-4 uppercase  leading-tight  tracking-wide appearance-none text-gray-700 focus:bg-white   font-semibold w-full   "
                       // label="Firstname"
                       placeholder="John"
+                      name="FIRSTNAME"
+                      value={values.FIRSTNAME}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    {errors.FIRSTNAME && touched.FIRSTNAME ? (
+                      <p className="text-red-300">{errors.FIRSTNAME}</p>
+                    ) : null}
                   </div>
                   <div className="w-full m-3">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2">
@@ -52,6 +81,10 @@ const Contact = () => {
                       className=" bg-gray-200  py-3 px-4 uppercase  leading-tight  tracking-wide appearance-none text-gray-700 focus:bg-white   font-semibold w-full   "
                       // label="Firstname"
                       placeholder="DOE"
+                      name="LASTNAME"
+                      value={values.LASTNAME}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
                   </div>
                 </div>
@@ -63,6 +96,10 @@ const Contact = () => {
                     className=" bg-gray-200 h-full py-3 px-4   leading-tight font-semibold  tracking-wide appearance-none text-gray-700 focus:bg-white    w-full   "
                     placeholder="xyz@gmail.com"
                     type="email"
+                    name="EMAIL"
+                    value={values.EMAIL}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
                 </div>
                 <div className="m-3  w-full">
@@ -73,7 +110,14 @@ const Contact = () => {
                     className=" bg-gray-200 h-full py-3 px-4   leading-tight font-semibold  tracking-wide appearance-none text-gray-700 focus:bg-white    w-full   "
                     placeholder="+91 3209871274"
                     type="tel"
+                    name="PHONENUMBER"
+                    value={values.PHONENUMBER}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
+                  {errors.PHONENUMBER && (
+                    <p className="text-red-300">{errors.PHONENUMBER}</p>
+                  )}
                 </div>
                 <div className="m-3  w-full">
                   <label className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2">
@@ -84,6 +128,10 @@ const Contact = () => {
                     placeholder="COMMENTS"
                     type="text"
                     rows="3"
+                    name="text_message"
+                    value={values.text_message}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
                   />
                 </div>
 
