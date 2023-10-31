@@ -29,49 +29,93 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col  bg-secondary">
-        <div className="w-full max-sm:p-5 md:p-10    max-sm:text-sm text-xl  font-extralight md:tracking-wider  flex   flex-wrap  justify-center">
-          {/* Navigation Links */}
-          <div className="h-auto max-w-sm text-center p-10 md:m-16 m-2 border-b-2 transition duration-300 border-transparent hover:border-b-primary hover:scale-110 hover:text-primary text-graywhite  ">
-            HOME
+      <div className="grid items-center  max-md:grid-rows-4 max-sm:grid-rows-4  lg:grid-cols-4    bg-secondary w-full h-auto p-5">
+        <div className="m-2 place-self-center ">
+          <img
+            src="assets\Footer\Gold Black Modern Real Estate Logo (1).png"
+            alt=""
+            width={200}
+          />
+        </div>
+        <div className="text-white items-start flex flex-col m-2 place-self-center self-start font-thin">
+          <h1 className="text-2xl place-self-center">ABOUT US</h1>
+          Infinity Builders is a premier construction company dedicated to
+          turning your vision into reality. With a wealth of experience in
+          residential and commercial construction, we offer a wide range of
+          services, from design and planning to execution and project
+          management. Our commitment to quality, innovation, and client
+          satisfaction sets us apart as your trusted partner for all
+          construction needs.
+        </div>
+        <div className=" font-thin items-start flex self-start flex-col text-white place-self-center  m-2">
+          <h1 className="text-2xl place-self-center">CONTACT US</h1>
+          <div className="gap-3 hover:text-primary transition duration-300 inline-flex items-center my-3 ">
+            <div>
+              <ImLocation2 size={30} />
+            </div>
+            <p>718,CITY GATE,VISHALA,AHMEDABAD</p>{" "}
           </div>
-          <div className="h-auto max-w-sm text-center md:m-16 p-10  m-2 border-b-2 transition duration-300 border-transparent hover:border-b-primary hover:scale-110 hover:text-primary text-graywhite  ">
-            OUR SERVICES
-          </div>
-          <div className="h-auto max-w-sm text-center md:m-16 p-10 m-2 border-b-2 transition duration-300 border-transparent hover:border-b-primary hover:scale-110 hover:text-primary text-graywhite  ">
-            ABOUT US
-          </div>
-          <div className="h-auto max-w-sm text-center md:m-16  p-10 m-2 border-b-2 transition duration-300 border-transparent hover:border-b-primary hover:scale-110 hover:text-primary text-graywhite  ">
-            CONTACT US
+          <Link
+            className=" gap-3 hover:text-primary transition duration-300 inline-flex items-center my-3"
+            onClick={() => (window.location = "mailto:xyz@gmail.com")}
+          >
+            <div>
+              <HiMail size={30} />
+            </div>
+            <p>xyz@gmail.com</p>
+          </Link>
+          <div className=" gap-3 hover:text-primary transition duration-300 inline-flex items-center my-3">
+            <div>
+              <IoMdCall size={30} />
+            </div>
+            <p>+91 9865349023</p>
           </div>
         </div>
-        {/* Contact Info */}
-        <div className="flex flex-wrap   items-center justify-center  max-sm:text-sm text-2xl  font-extralight md:tracking-wider  w-full ">
-          <div className="p-10 w h-full   md:m-16 m-2  transition duration-300  hover:scale-110  text-graywhite">
-            <img
-              src="\assets\Footer\Gold Black Modern Real Estate Logo (1).png"
-              className="object-cover"
-              width={150}
-              alt=""
-            />
-          </div>
-          <div className="p-10 max-w-sm h-full flex-wrap justify-center text-center inline-flex items-center   m-2 border-b-2 transition duration-300 border-transparent   hover:scale-110 hover:text-primary text-graywhite">
-            <span className="m-2">
-              <ImLocation2 size={45} />
-            </span>
-            718,City Gate, Vishala,Ahmedabad{" "}
-          </div>
-          <div className="p-10 max-w-sm h-full flex-wrap justify-center text-center inline-flex items-center   m-2 border-b-2 transition duration-300 border-transparent   hover:scale-110 hover:text-primary text-graywhite">
-            <span className="m-2">
-              <IoMdCall size={45} />
-            </span>
-            +91 7654983402{" "}
-          </div>
-          <div className="p-10 max-w-sm h-full flex-wrap justify-center text-center inline-flex items-center   m-2 border-b-2 transition duration-300 border-transparent   hover:scale-110 hover:text-primary text-graywhite">
-            <span className="m-2">
-              <HiMail size={45} />
-            </span>
-            xyz@gmail.com{" "}
+        <div className="text-white  items-start flex flex-col  m-2 place-self-center self-start font-thin">
+          <h1 className="text-2xl place-self-center">LINKS</h1>
+          <div className="flex flex-row flex-wrap    justify-center ">
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/home"
+            >
+              HOME
+            </Link>
+            |
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/services"
+            >
+              SERVICES
+            </Link>
+            |
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/Wheredowebuild"
+            >
+              WHERE DO WE BUILD?
+            </Link>
+            |
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/ourprocess"
+            >
+              OUR PROCESS
+            </Link>
+            |
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/faq"
+            >
+              FAQ
+            </Link>
+            |
+            <Link
+              className="mx-2   hover:text-primary transition duration-300 "
+              to="/contact"
+            >
+              CONTACT US
+            </Link>
+            |
           </div>
         </div>
       </div>

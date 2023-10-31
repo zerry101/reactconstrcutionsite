@@ -1,3 +1,4 @@
+import "./Services.css";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { FaTrowelBricks } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -12,7 +13,7 @@ function Services() {
   return (
     <section className="bg-dullwhite">
       {/* What we offer banner */}
-      <div className="w-full flex flex-col    justify-center bg-primary">
+      <div data-aos="fade-right" className="page-banner">
         <div className="text-secondary tracking-widest mt-9 max-md:mt-20  max-sm:mt-20  font-sans text-center text-4xl">
           WHAT WE OFFER?
         </div>
@@ -22,7 +23,10 @@ function Services() {
       </div>
       {/* What we offer content */}
       <div className=" flex   flex-wrap gap-10   justify-center p-10">
-        <div className="bg-white  flex flex-col  max-w-md    shadow-xl transition duration-200 hover:scale-105 hover:bg-primary hover:text-secondary ">
+        <div
+          data-aos="zoom-in"
+          className="bg-white  flex flex-col  max-w-md    shadow-xl transition duration-200 hover:scale-105 hover:bg-primary hover:text-secondary "
+        >
           <img
             className=""
             src="assets\ServicePage\project_inspection_img2.jpg"
@@ -78,7 +82,10 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="bg-white  flex flex-col  max-w-md    shadow-xl transition duration-200 hover:scale-105 hover:bg-primary hover:text-secondary ">
+        <div
+          data-aos="zoom-in"
+          className="bg-white  flex flex-col  max-w-md    shadow-xl transition duration-200 hover:scale-105 hover:bg-primary hover:text-secondary "
+        >
           <img
             className=""
             src="assets\ServicePage\frameOnlyImg.jpg"
@@ -136,7 +143,10 @@ function Services() {
         </div>
       </div>
       {/* OUR SERVCIES BANNER */}
-      <div className="grid grid-rows-2 place-items-center w-full space-y-4 p-7 bg-secondary text-primary">
+      <div
+        data-aos="fade-right"
+        className="grid grid-rows-2 place-items-center w-full space-y-4 p-7 bg-secondary text-primary"
+      >
         <div className="text-center font-sans tracking-widest text-4xl">
           OUR SERVICES
         </div>
@@ -146,7 +156,10 @@ function Services() {
       </div>
       {/* OUR SERVICES CONTENT */}
       <div className="flex md:flex-row flex-wrap    w-full  justify-center ">
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <FaTrowelBricks size={70} />
           </div>
@@ -159,7 +172,10 @@ function Services() {
             envision.
           </div>
         </div>
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <MdOutlineRoofing size={70} />
           </div>
@@ -171,7 +187,10 @@ function Services() {
             resilient and visually appealing roof.
           </div>
         </div>
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <PiHammerDuotone size={70} />
           </div>
@@ -184,7 +203,10 @@ function Services() {
           </div>
         </div>
 
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <MdOutlineArchitecture size={70} />
           </div>
@@ -200,7 +222,10 @@ function Services() {
             touch.
           </div>
         </div>
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <SiInstructure size={70} />
           </div>
@@ -215,7 +240,10 @@ function Services() {
             vision stand strong, uniquely blending form and function.
           </div>
         </div>
-        <div className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  ">
+        <div
+          data-aos="zoom-in"
+          className="  m-12 flex flex-col text-secondary font-sans text-xl font-thin   gap-10 md:w-1/3 h-auto  text-center place-items-center  "
+        >
           <div className="bg-primary p-12 rounded-full ">
             <MdEngineering size={70} />
           </div>

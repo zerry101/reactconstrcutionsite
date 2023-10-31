@@ -4,10 +4,109 @@
 }
 
 .intro-content {
-  @apply bg-white text-secondary h-full    text-justify text-xl flex flex-col  items-center w-full p-10 drop-shadow-xl;
+  @apply bg-white text-secondary h-fit text-[16px]   text-justify flex flex-col  items-center w-full p-10 drop-shadow-xl;
 }
 
 .intro {
   @apply mt-32 bg-dullwhite p-4 w-full  grid sm:grid-cols-1 md:grid-cols-2;
 }
 
+.intro-row {
+  @apply flex m-10 items-center justify-center;
+}
+
+.intro-img {
+  @apply object-cover  max-h-80 w-auto  shadow-xl;
+}
+
+.intro-btn {
+  @apply button text-[16px] inline-flex items-center;
+}
+
+.our-services-secrion {
+  @apply bg-dullwhite h-auto w-full flex flex-col py-7;
+}
+
+.our-services-banner {
+  @apply items-center  grid grid-rows-2 space-y-4  justify-center w-full bg-secondary p-7 text-primary;
+}
+
+.our-services-header {
+  @apply font-sans text-[30px] tracking-widest text-center;
+}
+
+.our-services-subheader {
+  @apply font-thin text-[20px] text-center tracking-widest;
+}
+
+.our-services-card {
+  @apply items-stretch   flex   max-sm:flex-col   justify-self-center lg:px-80 justify-center;
+}
+
+.our-services-card-header {
+  @apply flex flex-col max-sm:my-7 text-center    place-items-center mx-7;
+}
+
+.our-services-img {
+  @apply text-secondary bg-primary   p-12 rounded-full;
+}
+
+.our-services-content {
+  @apply font-thin text-secondary;
+}
+
+.our-services-content-header {
+  @apply text-[30px] my-5;
+}
+
+.our-services-content-text {
+  @apply text-justify justify-between -tracking-normal  text-[18px];
+}
+
+.more-services-row {
+  @apply text-center text-[16px];
+}
+
+.more-services-button {
+  @apply button inline-flex items-center;
+}
+
+.why-us-banner {
+  @apply items-center  grid grid-rows-2 space-y-4  justify-center w-full bg-secondary p-7 text-primary;
+}
+
+.why-us-header {
+  @apply font-sans text-[30px] tracking-widest text-center;
+}
+
+.why-us-subheader {
+  @apply font-thin text-[20px] text-center tracking-widest;
+}
+
+.why-us-section {
+  @apply w-full text-[20px] font-light bg-dullwhite h-auto   p-12 flex flex-wrap justify-center;
+}
+
+.why-us-row {
+  @apply flex  gap-28 md:flex-row max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center;
+}
+
+.why-us-card {
+  @apply md:max-w-2xl  text-secondary border-b-8 border-r-8 bg-white  border-primary  p-7;
+}
+
+.why-us-card-header {
+  @apply text-4xl font-light  text-black my-10;
+}
+
+.why-us-card-text {
+  @apply font-thin;
+}
+
+.why-us-row-reverse {
+  @apply flex  gap-28 md:flex-row-reverse max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center;
+}
+
+.why-us-card-logo {
+  @apply rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary;
+}

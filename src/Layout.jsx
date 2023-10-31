@@ -3,7 +3,7 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 const Layout = () => {
   return (
-    <div>
+    <div className="">
       <Nav />
       <Outlet />
       <Footer />

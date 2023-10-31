@@ -13,21 +13,30 @@ import { GrMoney } from "react-icons/gr";
 import { PiStackBold } from "react-icons/pi";
 // import { BiSolidRightArrow } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // import { BsArrowRight } from "react-icons/bs";
 const Home = () => {
   return (
     <section>
+      <Helmet>
+        <meta
+          content="Explore services and offerings of infinity builder"
+          charSet="utf-8"
+        />
+        <title>Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       {/* Intro */}
-      <div className=" intro ">
-        <div className="flex m-10 items-center justify-center ">
+      <div className="intro">
+        <div data-aos="flip-left" className="intro-row">
           <img
-            className="object-cover  max-h-80 w-auto  shadow-xl"
+            className="intro-img"
             src="assets\HomePage\INFINITY_BUILDER_LOGO_PNG.png"
-            alt=""
+            alt="Infinity Builder Logo "
           />
         </div>
-        <div className="intro-content font-sans text-secondary">
+        <div data-aos="fade-right" className="intro-content ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, iusto
           sed, numquam tempore necessitatibus corrupti ullam voluptas ab
           voluptatibus, eum maxime hic. Alias repellat voluptatem accusamus,
@@ -40,74 +49,74 @@ const Home = () => {
           maiores ut, accusamus minima corrupti nobis porro quibusdam sapiente
           cupiditate iusto nam rerum labore ex quidem sequi voluptatem adipisci
           placeat.
-          <button className="button inline-flex items-center ">
+          <Link to="/services" className="intro-btn ">
             INQUIRE NOW{" "}
             <span className="ml-2">
               <TfiArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
       {/* Our Services Banner*/}
-      <div className="items-center  grid grid-rows-2 space-y-4  justify-center w-full bg-secondary p-7 text-primary">
-        <h1 className="font-sans text-4xl tracking-widest text-center">
-          OUR SERVICES
-        </h1>
-        <h1 className="font-thin text-2xl text-center tracking-widest	">
-          {" "}
-          YEARS OF EXPERIENCE
-        </h1>
+      <div data-aos="fade-right" className="our-services-banner">
+        <h1 className="our-services-header ">OUR SERVICES</h1>
+        <h1 className="our-services-subheader	"> YEARS OF EXPERIENCE</h1>
       </div>
 
       {/* Our Services */}
-      <div className="bg-dullwhite h-auto w-full flex flex-col py-7">
+      <div className="our-services-secrion">
         {/*Our Services Content  */}
-        <div className=" items-stretch  flex   max-sm:flex-col   justify-self-center lg:px-80 justify-center  ">
-          <div className="flex flex-col max-sm:my-7 text-center    place-items-center mx-7">
-            <div className="text-secondary bg-primary   p-12 rounded-full">
+        <div className="our-services-card">
+          <div data-aos="fade-up" className="our-services-card-header">
+            <div className="our-services-img">
               <FaTrowelBricks size={70} />
             </div>
-            <div className="font-thin text-secondary">
-              <h3 className=" text-3xl my-5 ">CONSTRUCTION</h3>
-              <p className="text-justify text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                veniam similique deserunt cumque odit qui modi veritatis in
-                alias quasi.
+            <div className="our-services-content  ">
+              <h1 className=" our-services-content-header ">CONSTRUCTION</h1>
+              <p className="our-services-content-text">
+                Our construction services showcase expertise, precision, and
+                dedication. We bring your vision to life, managing every detail
+                with meticulous care, ensuring your project is completed on time
+                and to the highest standards of quality. Trust us to build the
+                future you envision.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col max-sm:my-7 text-center place-items-center  mx-7">
-            <div className="text-secondary bg-primary  p-12 rounded-full">
+          <div data-aos="fade-up" className="our-services-card-header">
+            <div className="our-services-img">
               <MdOutlineRoofing size={70} />
             </div>
-            <div className="font-thin text-secondary">
-              <h3 className=" text-3xl my-5">ROOFING</h3>
-              <p className="text-justify text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                veniam similique deserunt cumque odit qui modi veritatis in
-                alias quasi.
+            <div className="our-services-content ">
+              <h3 className=" our-services-content-header">ROOFING</h3>
+              <p className="our-services-content-text">
+                Enhance your property with our professional roofing solutions.
+                We offer durable, custom roofing options using top-quality
+                materials and expert craftsmanship to protect your investment.
+                Trust us for a resilient and visually appealing roof.
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col text-center max-sm:my-7   place-items-center mx-7">
-            <div className="text-secondary bg-primary  p-12 rounded-full">
+          <div data-aos="fade-up" className="our-services-card-header">
+            <div className="our-services-img">
               <PiHammerDuotone size={70} />
             </div>
-            <div className="font-thin text-secondary">
-              <h3 className=" text-3xl my-5 ">REMODELING</h3>
-              <p className="text-justify text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                veniam similique deserunt cumque odit qui modi veritatis in
-                alias quasi.
+            <div className="our-services-content">
+              <h1 className=" our-services-content-header">REMODELING</h1>
+              <p className="our-services-content-text">
+                If you are looking to enhance or revitalize an existing space,
+                our renovation and remodeling services are tailored to meet your
+                unique requirements. Our team can transform your current
+                property into a modern, functional, and aesthetically pleasing
+                space.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="text-center text-xl">
-          <Link to="/services" className="button inline-flex items-center ">
+        <div data-aos="fade-right" className="more-services-row">
+          <Link to="/services" className="more-services-button">
             MORE SERVICES
             <span className="ml-2">
               <PiStackBold />
@@ -117,104 +126,114 @@ const Home = () => {
       </div>
 
       {/* WHY US BANNER  */}
-      <div className="items-center  grid grid-rows-2 space-y-4  justify-center w-full bg-secondary p-7 text-primary">
-        <h1 className="font-sans text-4xl tracking-widest text-center">
-          WHY US?
-        </h1>
-        <h1 className="font-thin text-2xl text-center tracking-widest	">
+      <div data-aos="fade-right" className="why-us-banner">
+        <h1 className="why-us-header">WHY US?</h1>
+        <h1 className="why-us-subheader">
           {" "}
           ELEVATING CONSTRUCTION STANDARDS{" "}
           {/* Experience, Expertise, Excellence */}
         </h1>
       </div>
       {/* WHY US CONTENT  */}
-      <div className="w-full text-xl font-light bg-dullwhite h-auto   p-12 flex flex-wrap justify-center">
-        <div className="flex  gap-28 md:flex-row max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-r-8  border-primary  p-7">
-            <h1 className="text-4xl font-sans  my-10">
-              Exceptional Craftsmanship
-            </h1>
-            Discover why our construction team stands out. From skilled artisans
-            to expert project managers, we take pride in delivering top-notch
-            craftsmanship that exceeds industry standards. See how our attention
-            to detail and commitment to quality can transform your vision into a
-            reality.
+      <div className="why-us-section">
+        <div className="why-us-row">
+          <div data-aos="zoom-out" className="why-us-card">
+            <h1 className="why-us-card-header ">Exceptional Craftsmanship</h1>
+            <p className="why-us-card-text">
+              Discover why our construction tea
+              <p></p>m stands out. From skilled artisans to expert project
+              managers, we take pride in delivering top-notch craftsmanship that
+              exceeds industry standards. See how our attention to detail and
+              commitment to quality can transform your vision into a reality.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <GiStoneCrafting size={70} />
           </div>
         </div>
 
-        <div className="flex  gap-28 md:flex-row-reverse max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-l-8 border-primary bg-white p-7">
-            <h1 className="text-4xl font-sans   my-10">
-              Demonstrated Expertise
-            </h1>
-            We have been building success stories for our clients for years.
-            Explore our portfolio of completed projects and learn about our
-            proven track record. With a history of on-time delivery and
-            satisfied clients, you can trust us to handle your construction
-            needs with the same level of expertise and professionalism.
+        <div className="why-us-row-reverse">
+          <div data-aos="zoom-out" className="why-us-card">
+            <h1 className="why-us-card-header ">Demonstrated Expertise</h1>
+            <p className="why-us-card-text ">
+              We have been building success stories for our clients for years.
+              Explore our portfolio of completed projects and learn about our
+              proven track record. With a history of on-time delivery and
+              satisfied clients, you can trust us to handle your construction
+              needs with the same level of expertise and professionalism.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <MdWorkspacePremium size={70} />
           </div>
         </div>
 
-        <div className="flex  gap-28 md:flex-row max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-r-8 border-primary bg-white p-7">
-            <h1 className="text-4xl font-sans   my-12">
-              Client Centric Approach
-            </h1>
-            At our construction company, you are more than just a project; you
-            are a valued partner. Discover how our client-centric approach puts
-            your needs and vision at the forefront. We collaborate closely with
-            you to ensure your project is executed to your exact specifications,
-            ensuring your complete satisfaction.
+        <div className="why-us-row">
+          <div
+            data-aos="zoom-out"
+            className="md:max-w-2xl  text-secondary border-b-8 border-r-8 border-primary bg-white p-7"
+          >
+            <h1 className="why-us-card-header ">Client Centric Approach</h1>
+            <p className="why-us-card-text ">
+              At our construction company, you are more than just a project; you
+              are a valued partner. Discover how our client-centric approach
+              puts your needs and vision at the forefront. We collaborate
+              closely with you to ensure your project is executed to your exact
+              specifications, ensuring your complete satisfaction.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <TbTargetArrow size={70} />
           </div>
         </div>
 
-        <div className="flex  gap-28 md:flex-row-reverse max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-l-8 border-primary bg-white p-7">
-            <h1 className="text-4xl font-sans    my-12">
-              Innovative Solutions
-            </h1>
-            We pride ourselves on being at the forefront of construction
-            innovation. Learn how our team leverages the latest technologies and
-            sustainable building practices to create cutting-edge solutions.
-            From eco-friendly designs to efficient project management, we are
-            committed to delivering forward-thinking results.
+        <div className="why-us-row-reverse">
+          <div data-aos="zoom-out" className="why-us-card">
+            <h1 className="why-us-card-header ">Innovative Solutions</h1>
+            <p className="why-us-card-text ">
+              We pride ourselves on being at the forefront of construction
+              innovation. Learn how our team leverages the latest technologies
+              and sustainable building practices to create cutting-edge
+              solutions. From eco-friendly designs to efficient project
+              management, we are committed to delivering forward-thinking
+              results.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <HiLightBulb size={70} />
           </div>
         </div>
 
-        <div className="flex  gap-28 md:flex-row max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-r-8 border-primary bg-white p-7">
-            <h1 className="text-4xl font-sans    my-12">Safety First</h1>
-            Safety is our top priority on every job site. Explore our
-            comprehensive safety protocols and training initiatives that keep
-            our team and your project secure. We are dedicated to maintaining a
-            safe and accident-free environment for everyone involved.
+        <div className="why-us-row">
+          <div
+            data-aos="zoom-out"
+            className="md:max-w-2xl  text-secondary border-b-8 border-r-8 border-primary bg-white p-7"
+          >
+            <h1 className="why-us-card-header ">Safety First</h1>
+            <p className="why-us-card-text ">
+              Safety is our top priority on every job site. Explore our
+              comprehensive safety protocols and training initiatives that keep
+              our team and your project secure. We are dedicated to maintaining
+              a safe and accident-free environment for everyone involved.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <AiFillSafetyCertificate size={70} />
           </div>
         </div>
-        <div className="flex  gap-28 md:flex-row-reverse max-sm:flex-col-reverse my-12 -tracking-wide text-justify items-center place-items-center">
-          <div className="md:max-w-2xl  text-secondary border-b-8 border-l-8 border-primary bg-white p-7">
-            <h1 className="text-4xl font-sans    my-12">Transparent Pricing</h1>
-            We believe in honest and transparent pricing. Find out how we
-            provide detailed cost estimates and clear project timelines,
-            ensuring you have full control and awareness of your project
-            financial aspects. No hidden fees or surprises; just
-            straightforward, fair pricing.
+        <div className="why-us-row-reverse">
+          <div data-aos="zoom-out" className="why-us-card">
+            <h1 className="why-us-card-header ">Transparent Pricing</h1>
+
+            <p className="why-us-card-text ">
+              We believe in honest and transparent pricing. Find out how we
+              provide detailed cost estimates and clear project timelines,
+              ensuring you have full control and awareness of your project
+              financial aspects. No hidden fees or surprises; just
+              straightforward, fair pricing.
+            </p>
           </div>
-          <div className="rounded-full p-10 ring-4 text-secondary bg-primary ring-secondary">
+          <div data-aos="zoom-in" className="why-us-card-logo">
             <GrMoney size={70} />
           </div>
         </div>
